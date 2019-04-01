@@ -297,7 +297,7 @@ export default class ImplicitFlow {
 					method: 'POST'
 				});
 			} else {
-				const script = $('script[type="text/javascript"][language="javascript"]').text();
+				const script = $.html();
 				const locations = script.match(/location\.href\s+=\s+"([^"]+)"/i);
 
 				if (locations === null) {
